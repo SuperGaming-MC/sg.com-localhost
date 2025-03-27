@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Where to Find Me</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            padding-top: 70px;
+        }
+
+        .nav-bar {
+            background-color: #2c3e50;
+            padding: 15px 0;
+            margin-bottom: 20px;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .nav-brand {
+            color: white;
+            font-size: 1.5em;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-bar a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-bar a:hover {
+            background-color: #e67e22;
+            transform: translateY(-2px);
+        }
+
+        .nav-bar .active {
+            background-color: #e67e22;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-top: 20px;
+            font-family: Arial, sans-serif;
+        }
+
+        .profile-link, .youtube-link, .patreon-link, .merch-link {
+            display: block;
+            font-size: 20px;
+            text-decoration: none;
+            margin: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .profile-link { color: #2e7d32; }
+        .youtube-link { color: #cc0000; }
+        .patreon-link { color: #000000; }
+        .merch-link { color: #ff00ff; }
+
+        .profile-link:hover { color: #1b5e20; }
+        .youtube-link:hover { color: #990000; }
+        .patreon-link:hover { color: #333333; }
+        .merch-link:hover { color: #cc00cc; }
+
+        .description-text {
+            font-size: 18px;
+            color: #000000;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav-bar">
+        <div class="nav-container">
+            <a href="/" class="nav-brand">SG.com</a>
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="/where_to_find_me.html" class="active">Where to Find Me</a>
+            </div>
+        </div>
+    </nav>
+
+    <h1>Where to Find Me</h1>
+
+    <p class="description-text">At this page you can see where to find me!</p>
+    <a href="https://modrinth.com/user/SG" class="profile-link">My Modrinth Profile</a>
+    <a href="https://www.youtube.com/channel/UCGjadmuhyt4qaEMrziL_bZg" class="youtube-link">My YouTube Channel</a>
+    <a href="https://patreon.com/SG_MC" class="patreon-link">My Patreon</a>
+    <p class="description-text">Did you know that you can join my patreon for free!</p>
+    <a href="https://sg-merch-shop.fourthwall.com/en-gbp" class="merch-link">My Merch</a>
+    <p class="description-text">If you visit one of these links can you please subscribe or join because that will help out a lot!</p>
+</body>
+</html>

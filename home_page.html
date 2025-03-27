@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Page</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            padding-top: 70px;
+        }
+
+        .nav-bar {
+            background-color: #2c3e50;
+            padding: 15px 0;
+            margin-bottom: 20px;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .nav-brand {
+            color: white;
+            font-size: 1.5em;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-bar a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-bar a:hover {
+            background-color: #e67e22;
+            transform: translateY(-2px);
+        }
+
+        .nav-bar .active {
+            background-color: #e67e22;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-top: 20px;
+            font-family: Arial, sans-serif;
+        }
+
+        .circles-container {
+            height: 240px;
+            position: relative;
+            margin-top: 20px;
+            overflow: hidden;
+        }
+
+        .circle {
+            width: 30px;
+            height: 30px;
+            background-color: black;
+            border-radius: 50%;
+            position: absolute;
+            left: 0;
+        }
+
+        .row-1 { top: 0; }
+        .row-2 { top: 60px; }
+        .row-3 { top: 120px; }
+        .row-4 { top: 180px; }
+    </style>
+</head>
+<body>
+    <nav class="nav-bar">
+        <div class="nav-container">
+            <a href="/" class="nav-brand">SG.com</a>
+            <div class="nav-links">
+                <a href="/" class="active">Home</a>
+                <a href="/where_to_find_me.html">Where to Find Me</a>
+            </div>
+        </div>
+    </nav>
+    
+    <h1>Welcome to SG.com!</h1>
+    <p>At this website you will find information about me SG!</p>
+    <div class="circles-container">
+        <!-- Row 1 -->
+        <div class="circle row-1"></div>
+        <div class="circle row-1"></div>
+        <div class="circle row-1"></div>
+        <div class="circle row-1"></div>
+        <!-- Row 2 -->
+        <div class="circle row-2"></div>
+        <div class="circle row-2"></div>
+        <div class="circle row-2"></div>
+        <div class="circle row-2"></div>
+        <!-- Row 3 -->
+        <div class="circle row-3"></div>
+        <div class="circle row-3"></div>
+        <div class="circle row-3"></div>
+        <div class="circle row-3"></div>
+        <!-- Row 4 -->
+        <div class="circle row-4"></div>
+        <div class="circle row-4"></div>
+        <div class="circle row-4"></div>
+        <div class="circle row-4"></div>
+    </div>
+
+    <script>
+        const circles = document.querySelectorAll('.circle');
+        
+        circles.forEach((circle, index) => {
+            const row = Math.floor(index / 4);
+            const baseSpeed = 4 + (row * 0.5);
+            
+            gsap.to(circle, {
+                x: '100vw',
+                duration: baseSpeed,
+                repeat: -1,
+                ease: "none",
+                delay: (index % 4) * 0.5,
+            });
+        });
+    </script>
+</body>
+</html>
