@@ -14,7 +14,7 @@ const server = http.createServer((req, res) => {
     
     // Handle root path
     if (pathname === '/' || pathname === '/index.html') {
-        pathname = '/home_page.html';
+        pathname = '/index.html';
     }
     
     // Fix the pathname for "where to find me" page - handle both versions of the URL
